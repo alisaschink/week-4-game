@@ -20,15 +20,24 @@ var targetNumber = Math.floor((Math.random()*100)+20);
   var z = Math.floor((Math.random()*20)+1);
 
   var numberOptions = [w, x, y, z];
+
+  //creates multiple crystal images
+  var crystal1 = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystal1.jpg")
+  var crystal2 = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystal2.jpg")
+  var crystal3 = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystal3.jpg")
+  var crystal4 = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystal4.jpg")
+  
+  var crystalArray = [crystal1, crystal2, crystal3, crystal4];
+
   // for loop to create crystals for every numberOption.
   for (var i = 0; i < numberOptions.length; i++) {
 
-    // For each iteration, we will create an imageCrystal
-    var imageCrystal = $("<img>").addClass("crystalImage").attr("src", "assets/images/crystal1.jpg").attr("data-crystalvalue", numberOptions[i]);
-
-    // each crystal image will get added to the page.
+    // For each iteration, will create an imageCrystal
+    imageCrystal = $(crystalArray[i]).attr("data-crystalvalue", numberOptions[i]);
+    
+    //each crystal image will get added to the page.
     $("#crystals").append(imageCrystal);
-  }
+  };
 
   //click event for eachcrystal on the page
   $(".crystalImage").on("click", function() {
@@ -45,7 +54,6 @@ var targetNumber = Math.floor((Math.random()*100)+20);
 
     //logs wins or losses depending on if user wins or loses the game
     if (counter === targetNumber) {
-      console.log("You win!");
       wins++
       $("#wins").text(wins);
       //reset game 
@@ -53,7 +61,6 @@ var targetNumber = Math.floor((Math.random()*100)+20);
     }
 
     else if (counter > targetNumber) {
-      console.log("You lose!!");
       losses++
       $("#losses").text(losses);
       //reset game
