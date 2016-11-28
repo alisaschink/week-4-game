@@ -1,9 +1,4 @@
-//ensures that the target number is between 20-120 and is a random number
-var targetNumber = Math.floor((Math.random()*100)+20);
-
-  $("#numberToGuess").text(targetNumber);
-
-  var counter = 0;
+ var counter = 0;
   var wins = 0;
   var losses = 0;
 
@@ -12,6 +7,12 @@ var targetNumber = Math.floor((Math.random()*100)+20);
   $("#wins").text(wins);
   $("#losses").text(losses);
 
+
+var game = function(){
+//ensures that the target number is between 20-120 and is a random number
+var targetNumber = Math.floor((Math.random()*100)+20);
+
+  $("#numberToGuess").text(targetNumber);
 
    // sets crystal values to four random numbers.
   var w = Math.floor((Math.random()*20)+1);
@@ -33,7 +34,7 @@ var targetNumber = Math.floor((Math.random()*100)+20);
   for (var i = 0; i < numberOptions.length; i++) {
 
     // For each iteration, will create an imageCrystal
-    imageCrystal = $(crystalArray[i]).attr("data-crystalvalue", numberOptions[i]);
+    var imageCrystal = $(crystalArray[i]).attr("data-crystalvalue", numberOptions[i]);
     
     //each crystal image will get added to the page.
     $("#crystals").append(imageCrystal);
@@ -57,6 +58,10 @@ var targetNumber = Math.floor((Math.random()*100)+20);
       wins++
       $("#wins").text(wins);
       //reset game 
+      counter = 0;
+      $("#score").text(counter);
+      $("#crystals").empty();
+      game();
 
     }
 
@@ -64,6 +69,13 @@ var targetNumber = Math.floor((Math.random()*100)+20);
       losses++
       $("#losses").text(losses);
       //reset game
+      counter = 0;
+      $("#score").text(counter);
+      $("#crystals").empty();
+      game();
     }
 
   });
+};
+
+game();
