@@ -8,6 +8,39 @@
   </head>
 
   <body>
+    <h1 id="mainHeading">Crystal Game</h1>
+    <p> You will be given a random number at the start of the game.
+    <br>
+    <br>
+    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+    <br>
+    <br>
+    You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. 
+    <br>
+    <br>
+    The value of each crystal is hidden from you until you click on it.
+    <br>
+    <br>
+    Each time when the game starts, the game will change the values of each crystal.</p>
+
+
+    <h1>Number to Guess: <span id="numberToGuess"></span></h1>
+
+  <div id="crystals">
+  </div>
+
+  <div id= "scoring">
+    <h1> New Score: <span id="score"></span></h1>
+  </div>
+
+  <div id = "winsLosses">
+    <h1> Wins: <span id="wins"></span></h1>
+    <h1> Losses: <span id="losses"></span></h1>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 
 </html>
