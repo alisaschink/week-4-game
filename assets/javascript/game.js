@@ -3,9 +3,9 @@
   var losses = 0;
 
   //shows initial score (0) for counter, wins, and losses
-  $("#score").text(counter);
-  $("#wins").text(wins);
-  $("#losses").text(losses);
+  $("#scoreCount").text("New Score: " + counter);
+  $("#winsCount").text("Wins: " + wins);
+  $("#lossCount").text("Losses: " + losses);
 
 
 var game = function(){
@@ -14,11 +14,11 @@ var targetNumber = Math.floor((Math.random()*100)+20);
 
   $("#numberToGuess").text(targetNumber);
 
-   // sets crystal values to four random numbers.
-  var w = Math.floor((Math.random()*20)+1);
-  var x = Math.floor((Math.random()*20)+1);
-  var y = Math.floor((Math.random()*20)+1);
-  var z = Math.floor((Math.random()*20)+1);
+   // sets crystal values to four random numbers between 1 and 12.
+  var w = Math.floor((Math.random()*11)+1);
+  var x = Math.floor((Math.random()*11)+1);
+  var y = Math.floor((Math.random()*11)+1);
+  var z = Math.floor((Math.random()*11)+1);
 
   var numberOptions = [w, x, y, z];
 
@@ -51,29 +51,26 @@ var targetNumber = Math.floor((Math.random()*100)+20);
     counter = counter + crystalValue;
 
     //increases counter on the page to include the crystal value
-   $("#score").text(counter);
+   $("#scoreCount").text("New Score: " + counter);
 
     //logs wins or losses depending on if user wins or loses the game
     if (counter === targetNumber) {
       wins++
-      $("#wins").text(wins);
-      //reset game 
-      counter = 0;
-      $("#score").text(counter);
-      $("#crystals").empty();
-      game();
-
-    }
-
-    else if (counter > targetNumber) {
+      $("#winsCount").text("Wins: " + wins);
+      $("#scoreCount").text("You Win!");
+    } else if (counter > targetNumber) {
       losses++
-      $("#losses").text(losses);
-      //reset game
-      counter = 0;
-      $("#score").text(counter);
+      $("#lossCount").text("Losses: " + losses);
+      $("#scoreCount").text("You Lose!");
+    };
+
+    //reset button resets game
+  $("#reset").on("click", function() {
+    counter = 0;
+      $("#scoreCount").text("New Score: " + counter);
       $("#crystals").empty();
       game();
-    }
+    });
 
   });
 };
