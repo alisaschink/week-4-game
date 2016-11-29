@@ -1,3 +1,4 @@
+ //declares initial variables
  var counter = 0;
   var wins = 0;
   var losses = 0;
@@ -12,7 +13,7 @@ var game = function(){
 //ensures that the target number is between 20-120 and is a random number
 var targetNumber = Math.floor((Math.random()*100)+20);
 
-  $("#numberToGuess").text(targetNumber);
+  $("#randomNumber").text("Random Number: " + targetNumber);
 
    // sets crystal values to four random numbers between 1 and 12.
   var w = Math.floor((Math.random()*11)+1);

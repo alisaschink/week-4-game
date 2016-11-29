@@ -1,5 +1,64 @@
+*{
+  align-content: center;
+  text-align: center;
+  color: #f3efef;
+}
+
+body{
+  background-image: url("../images/dark_embroidery.png");
+}
+
+h2{
+  font-size: 24px;
+}
+
+p{
+  font-size: 18px;
+}
+
+button{
+  font-size: 16px;
+  background-color: #553965;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.container{
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
 .crystalImage{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   float: left;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#mainHeading{
+  font-size: 36px;
+  padding: 5px;
+  margin: 5px;
+  clear: both;
+}
+
+#numberBox{
+  clear: both;
+}
+
+#crystalBox{
+  float:left;
+}
+
+#scoreBox{
+  float: left;
+}
+
+#scoring{
+  clear: both;
 }

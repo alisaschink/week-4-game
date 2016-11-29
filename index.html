@@ -2,52 +2,65 @@
 <html>
 
   <head>
-    <title> week 4 game </title>
+    <title>week 4 game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
 
   <body>
-    <h1 id="mainHeading">Crystal Game</h1>
-    <p> You will be given a random number at the start of the game.
-    <br>
-    <br>
-    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-    <br>
-    <br>
-    You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. 
-    <br>
-    <br>
-    The value of each crystal is hidden from you until you click on it.
-    <br>
-    <br>
-    Each time when the game starts, the game will change the values of each crystal.</p>
-
-
-    <h1>Number to Guess: <span id="numberToGuess"></span></h1>
-
-  <div id="crystals">
-  </div>
-
-  <div id= "scoring">
-    <h1 = id="scoreCount"></h1>
-  </div>
-
-  <div id = "winsDiv">
-    <h1 id="winsCount"></h1>
-  </div>
-
-  <div id="lossDiv">
-    <h1 id="lossCount"></h1>
-  </div>
-
-  <div class="container">
-      <button id="reset">Play again!</button>
+    <div class="container">
+      <h1 id="mainHeading">Crystal Game</h1>
+    </div>
+    
+    <div class="container">
+      <p> You will be given a random number at the start of the game.
+          <br>
+          <br>
+          There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+          <br>
+          <br>
+          You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. 
+          <br>
+          <br>
+          The value of each crystal is hidden from you until you click on it.
+          <br>
+          <br>
+          Each time when the game starts, the game will change the values of each crystal.</p>
     </div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <div class="container" id="numberBox">
+      <h2 id="randomNumber"></h2>
+    </div>
 
-  <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <br>
+
+    <div class="container">
+      <div class="container" id="crystalBox">
+        <div id="crystals">
+        </div>
+      </div>
+
+      <div class="container" id="scoreBox">
+        <div id= "scoring">
+          <h2 = id="scoreCount"></h2>
+        </div>
+
+        <div id = "winsDiv">
+          <h2 id="winsCount"></h2>
+        </div>
+
+        <div id="lossDiv">
+          <h2 id="lossCount"></h2>
+        </div>
+
+        <button id="reset">Play again!</button>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 
 </html>
