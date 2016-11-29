@@ -5,22 +5,27 @@
 }
 
 body{
-  background-image: url("../images/dark_embroidery.png");
+  background-image: url("../images/cave-stream.jpg");
 }
 
 h2{
   font-size: 24px;
+  font-family: 'Taviraj', serif;
 }
 
 p{
   font-size: 18px;
+  font-family: 'Taviraj', serif;
+  padding: 10px;
 }
 
 button{
-  font-size: 16px;
-  background-color: #553965;
+  font-size: 18px;
+  font-family: 'Taviraj', serif;
+  background-color: #1a1a1a;
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px;
+  padding: 5px;
 }
 
 .container{
@@ -31,6 +36,8 @@ button{
   padding: 10px;
   margin: 5px;
   display: inline-block;
+  background-color: #1a1a1a;
+  opacity: 0.85;
 }
 .crystalImage{
   width: 150px;
@@ -41,7 +48,8 @@ button{
 }
 
 #mainHeading{
-  font-size: 36px;
+  font-size: 40px;
+  font-family: 'Taviraj', serif;
   padding: 5px;
   margin: 5px;
   clear: both;
@@ -49,6 +57,10 @@ button{
 
 #numberBox{
   clear: both;
+}
+
+#randomNumber{
+  padding: 10px;
 }
 
 #crystalBox{
@@ -60,5 +72,13 @@ button{
 }
 
 #scoring{
-  clear: both;
+  margin: 6px;
+}
+
+#winsDiv{
+  margin: 6px;
+}
+
+#lossDiv{
+  margin: 6px;
 }
